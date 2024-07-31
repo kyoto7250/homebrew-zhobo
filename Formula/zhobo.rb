@@ -19,19 +19,7 @@ class Zhobo < Formula
         sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       end
     end
-  
-    on_windows do
-      if Hardware::CPU.intel?
-        if Hardware::CPU.is_64_bit?
-          url "https://github.com/kyoto7250/zhobo/releases/download/v0.1.0/zhobo-0.1.0-x86_64-pc-windows-msvc.tar.gz"
-          sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-        else
-          url "https://github.com/kyoto7250/zhobo/releases/download/v0.1.0/zhobo-0.1.0-i686-pc-windows-msvc.tar.gz"
-          sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-        end
-      end
-    end
-  
+
     test do
       system "#{bin}/zhobo", "--version"
     end
