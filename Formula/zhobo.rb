@@ -20,6 +20,10 @@ class Zhobo < Formula
       end
     end
 
+    def install
+      bin.install "zhobo"
+    end
+
     test do
       system "#{bin}/zhobo", "--version"
     end
