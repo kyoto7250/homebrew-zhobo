@@ -1,7 +1,7 @@
 # homebrew-zhobo
 [zhobo](https://github.com/kyoto7250/zhobo)'s homebrew package installer
 
-# install
+## install
 ```bash
 brew tap kyoto7250/zhobo
 brew install zhobo
