@@ -18,7 +18,7 @@ TAG="$1"
 
 # make a tmp directory and check this directory is empty.
 mkdir -p tmp/
-if [ -n "$(ls tmp/)" ]; then
+if [ -n "$(ls -A tmp/)" ]; then
     echo "please delete the files, first"
     exit 1
 fi
