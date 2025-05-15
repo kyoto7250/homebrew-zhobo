@@ -34,7 +34,9 @@ def main(tag: str) -> None:
         sys.exit(1)
 
     downloads = glob.glob("tmp/*.tar.gz", recursive=False)
-    assert len(downloads) == 6
+    if len(downloads) != 6:
+        print("Error: Expected 6 downloads in the 'tmp/' directory, but found", len(downloads))
+        sys.exit(1)
     name_and_sha= {}
 
     for download in downloads:
