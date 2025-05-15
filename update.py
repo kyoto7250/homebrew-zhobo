@@ -30,7 +30,7 @@ def build_url(tag: str, basename: str):
 def main(tag: str) -> None:
     # check the directory
     if not (os.path.exists("Formula/zhobo.rb") and os.path.exists("tmp/")):
-        print("check the your directory...")
+        print("check your directory...")
         sys.exit(1)
 
     downloads = glob.glob("tmp/*.tar.gz", recursive=False)
